@@ -24,6 +24,9 @@
 #import "MMWormhole.h"
 
 #include <CoreFoundation/CoreFoundation.h>
+#if !__has_feature(objc_arc)
+#error This class requires automatic reference counting
+#endif
 
 static NSString * const MMWormholeNotificationName = @"MMWormholeNotificationName";
 
